@@ -19,6 +19,7 @@ Python Kivy weather app using OpenWeatherMap API and Geocoder to return current 
 <!-- GETTING STARTED -->
 ## Getting Started
 </br>
+
 You must get an API Key at [https://openweathermap.org/](https://openweathermap.org/)
 
 ### Prerequisites
