@@ -1,5 +1,5 @@
 # kivy_weather_app
-
+</br>
 Python Kivy weather app using OpenWeatherMap API and Geocoder to return current weather activity in your city
 
 ##  Built with
@@ -18,7 +18,7 @@ Python Kivy weather app using OpenWeatherMap API and Geocoder to return current 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
+</br>
 You must get an API Key at [https://openweathermap.org/](https://openweathermap.org/)
 
 ### Prerequisites
@@ -34,12 +34,14 @@ You must get an API Key at [https://openweathermap.org/](https://openweathermap.
 ##  Author
 </br>
 
-
 **ProphesierC**
 
-- ❤️ [Profile](https://github.com/Prophesierc)
+</br>
 
-- 💻 [Email](mailto:bwknowles98@gmail.com?subject=Hi%20from%20Project%20Initiator "Hi!")
+  [![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Prophesierc)
+
+
+  💻 [Email](mailto:bwknowles98@gmail.com?subject=Hi%20from%20Project%20Initiator "Hi!")
 
 
 ## 🤝 Support
