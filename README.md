@@ -12,10 +12,25 @@ Python Kivy weather app using OpenWeatherMap API and Geocoder to return current 
 
 <p align="center">
 <img src="https://github.com/prophesierc/kivy_weather_app/blob/main/img/example.PNG"
-  alt="Size Limit comment in pull request about bundle size changes"
+  alt="example GUI"
   width="345" height="571">
 </p>
 
+<!-- GETTING STARTED -->
+## Getting Started
+
+You must get an API Key at [https://openweathermap.org/](https://openweathermap.org/)
+
+### Prerequisites
+
+1. Install requirements 
+   ```sh
+   $ pip install -r requirements.txt
+   ```
+2. Enter your API in `myapi.py`
+   ```py
+   api_key = 'OPENWEATHERMAP API KEY'
+   ```
 ##  Author
 </br>
 
