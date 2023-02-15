@@ -42,6 +42,9 @@ You must get an API Key at [https://openweathermap.org/](https://openweathermap.
 
 
   💻 [Email](mailto:bwknowles98@gmail.com?subject=Hi%20from%20Project%20Initiator "Hi!")
+  
+<a href="https://www.buymeacoffee.com/ProphesierC" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
 
 
 ## 🤝 Support
