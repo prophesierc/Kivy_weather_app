@@ -1,13 +1,14 @@
 # kivy_weather_app
 </br>
+
 Python Kivy weather app using OpenWeatherMap API and Geocoder to return current weather activity in your city
 
 ##  Built with
 </br>
 
-- [Python](https://www.python.org/ "Python"): as Main Coding Language for executing commands
-</br>
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp; and &nbsp;  [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://www.python.org/ "Python")
 
+</br>
 
 
 <p align="center">
