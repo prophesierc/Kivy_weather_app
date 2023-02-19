@@ -8,14 +8,10 @@ from datetime import datetime
 from kivy.core.window import Window
 from kivy.clock import Clock
 from kivy.uix.label import Label
-import os
 import geocoder
 import my_api
 
-g = geocoder.ip('me')
-api_key = os.environ['api_key']
 Window.size = (350, 580)
-
 
 class ShowcaseScreen(MDScreen):
     pass
@@ -28,7 +24,7 @@ class ImageButton(ButtonBehavior, AsyncImage):
 class myApp(MDApp):
     def my_callback(self, dt=0):
         dt = datetime.now()
-        self.clock.text = f'{dt.strftime("%A")}  |  {dt.strftime("%b")} {dt.strftime("%d")} | {dt.strftime("%I:%M:%S")}'
+        self.clock.text = f'{dt.strftime('%A')}  |  {dt.strftime('%b')} {dt.strftime('%d')} | {dt.strftime('%I:%M:%S')}'
 
     def build(self):
         self.window = Screen()
@@ -65,7 +61,7 @@ class myApp(MDApp):
                 'center_x': .565,  #1.17,
                 'center_y': 0.22
             },
-            theme_text_color="Custom",
+            theme_text_color='Custom',
             text_color='white',
             font_style='H5',
             padding=('1dp', '1dp'),
@@ -80,7 +76,7 @@ class myApp(MDApp):
                 'center_x': 0.78,
                 'center_y': 0.1
             },
-            theme_text_color="Custom",
+            theme_text_color='Custom',
             text_color='white',
             font_style='H3',
         )
@@ -92,3 +88,4 @@ class myApp(MDApp):
 
 if __name__ == '__main__':
     myApp().run()
+    
