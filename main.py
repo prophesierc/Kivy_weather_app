@@ -77,7 +77,6 @@ class Splash(MDScreen):
 		self.add_widget(self.api_text)
 		self.add_widget(self.api_btn)
 		self.api_btn.bind(on_press=self.changer)	
-		# intregrate API KEY
 		#my_api.api_key = self.api_text.text
 
 	def changer(self, *args, **kwargs):

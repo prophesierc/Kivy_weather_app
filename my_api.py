@@ -1,4 +1,3 @@
-
 import requests
 import geocoder
 import os
