@@ -4,3 +4,4 @@ __pycache__
 .cache/replit
 config.py
 .img/example.PNG
+*.pyc
