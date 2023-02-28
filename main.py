@@ -1,4 +1,4 @@
-from kivy.uix.screenmanager import ScreenManager, FadeTransition
+from kivy.uix.screenmanager import ScreenManager
 from kivymd.uix.label import MDLabel
 from kivymd.app import MDApp
 from kivy.uix.image import AsyncImage
@@ -7,15 +7,12 @@ from kivymd.uix.screen import MDScreen
 from kivy.core.window import Window
 from kivy.clock import Clock
 from kivy.uix.label import Label
-from kivy.uix.button import Button
-from kivymd.uix.textfield import MDTextField
 from datetime import datetime
 import geocoder
 import my_api
 
 g = geocoder.ip('me')
 Window.size = (350, 580)
-
 
 class ScreenManagement(ScreenManager):
     def __init__(self, **kwargs):
@@ -24,71 +21,7 @@ class ScreenManagement(ScreenManager):
 
 class ImageButton(ButtonBehavior, AsyncImage):
     pass
-
-
-# Splash screeen
-class Splash(MDScreen):
-	def __init__(self, **kwargs):
-		super(Splash, self).__init__(**kwargs)
-
-        # API label
-		self.api_lbl = Label(text='[b]Enter your OpenWeatherMap API key[/b]',
-                             size_hint=(.5, .3),
-                             pos_hint={
-                                 'center_x': .5,
-                                 'center_y': .9
-                             },
-                             markup=True)
-
-        #api_key text input box
-		self.api_text = MDTextField(text='',
-            pos_hint={
-                'center_x': 0.5,
-                'center_y': 0.6
-            },
-            size_hint={.5, .07},
-            halign='center',
-            hint_text='OpenWeatherMap API Key',
-            multiline=False,
-        )
-
-        #api button to enter api key
-		self.api_btn = Button(text='Enter',
-                              size_hint=(.5, .07),
-                              pos_hint={
-                                  'center_x': .5,
-                                  'center_y': .5
-                              })
-
-        ##api_key error flow control
-		self.null_text_value = MDTextField(
-			pos_hint={
-                'center_x': 0.5,
-                'center_y': 0.6
-            },
-            size_hint={.5, .07},
-            halign='center',
-            hint_text='OpenWeatherMap API Key',
-            multiline=False,
-			required = True
-        )
-        
-		self.add_widget(self.api_lbl)
-		self.add_widget(self.api_text)
-		self.add_widget(self.api_btn)
-		self.api_btn.bind(on_press=self.changer)	
-		#my_api.api_key = self.api_text.text
-
-	def changer(self, *args, **kwargs):
-		if len(self.null_text_value.text) > 0 :
-			if my_api.response.status_code == '200':
-				self.manager.current = 'main'
-		else:
-			self.remove_widget(self.api_text)
-			self.remove_widget(self.null_text_value)
-			self.add_widget(self.null_text_value)
-				
-
+			
 class Main(MDScreen):
     def my_callback(self, dt=0):
         dt = datetime.now()
@@ -149,19 +82,15 @@ class Main(MDScreen):
 
 
 class myApp(MDApp):
-    def on_start(self):
-        self.sm.current = "splash"
-
-    def build(self):
-        self.sm = ScreenManagement(transition=FadeTransition())
-        self.sm.add_widget(Splash(name="splash"))
-        self.sm.add_widget(Main(name='main'))
-        self.title = ' '
-        self.sm.cols = 1
-        self.theme_cls.theme_style = 'Dark'
-        return self.sm
+	def build(self):
+		self.sm = ScreenManagement()
+		self.sm.add_widget(Main(name='main'))
+		self.title = ' '
+		self.sm.cols = 1
+		self.theme_cls.theme_style = 'Dark'
+		return self.sm
 
 
 #runs kivy GUI
 if __name__ == '__main__':
-    myApp().run()
+	myApp().run()
