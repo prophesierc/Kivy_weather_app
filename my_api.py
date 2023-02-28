@@ -1,18 +1,14 @@
 import requests
 import geocoder
-import os
-
+import config
 g = geocoder.ip('me')
-api_key = os.environ['api_key']
 
-#API request
-url = f'https://api.openweathermap.org/data/2.5/weather?lat={g.lat}&lon={g.lng}&appid={api_key}&units=imperial'
+url = f'https://api.openweathermap.org/data/2.5/weather?lat={g.lat}&lon={g.lng}&appid={config.api_key}&units=imperial'
 response = requests.get(url)
 data = response.json()
 
 def weather_temp():
 	return f"{round(data['main']['temp'])}°"
-
 
 def weather_icon():
 	current_weather_icon = f"{data['weather'][0]['icon']}"
@@ -24,3 +20,4 @@ def feels_like():
 
 def description():
 	return f"{data['weather'][0]['description'].title()}"
+

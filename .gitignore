@@ -2,4 +2,6 @@ poetry.lock
 pyproject.toml
 __pycache__
 .cache/replit
+config.py
+.img/example.PNG
 *.pyc
