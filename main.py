@@ -25,7 +25,7 @@ class ImageButton(ButtonBehavior, AsyncImage):
 class Main(MDScreen):
     def my_callback(self, dt=0):
         dt = datetime.now()
-        self.clock.text = f'{dt.strftime("%A")}  |  {dt.strftime("%b")} {dt.strftime("%d")} | {dt.strftime("%I:%M:%S")}'
+        self.clock.text = f'{dt.strftime("%A")}  |  {dt.strftime("%b")} {dt.strftime("%d")} | {dt.strftime("%I:%M")}'
 
     def __init__(self, **kwargs):
         super(Main, self).__init__(**kwargs)
